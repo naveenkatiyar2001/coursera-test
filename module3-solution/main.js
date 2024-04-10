@@ -1,7 +1,12 @@
-$(document).ready(function() {
-  $('.dropdown').hover(function() {
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
-  }, function() {
-    $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+$(document).ready(function () {
+  // Initialize Bootstrap dropdown
+  $('.dropdown-toggle').dropdown();
+
+  // Custom dropdown handling
+  $('.dropdown-menu a').on('click', function (e) {
+    e.preventDefault();
+    var target = $(this).data('target');
+    $('.column').hide();
+    $('#' + target).fadeIn();
   });
 });

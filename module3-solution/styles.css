@@ -1,11 +1,5 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
 }
 
 header {
@@ -16,65 +10,12 @@ header {
 
 main {
   padding: 20px;
-  background-color: #E3DFE7;
-}
-
-.container {
-  padding: 0 15px;
 }
 
 h2 {
   margin-bottom: 20px;
 }
 
-.column {
-  padding: 10px;
-  margin: 10px;
-  background-color: #ffffff;
-}
-
-/* FOOTER */
-.panel-footer {
-  margin-top: 30px;
-  padding-top: 35px;
-  padding-bottom: 30px;
-  background-color: #4CAF50;
-  border-top: 0;
-}
-
-.panel-footer div.row {
-  margin-bottom: 35px;
-}
-
-#hours,
-#address {
-  line-height: 2;
-}
-
-#hours>span,
-#address>span {
-  font-size: 1.3em;
-  font-family: Arial, sans-serif;
-}
-
-#address p {
-  color: #000000;
-  font-size: .8em;
-  line-height: 1.8;
-  font-family: Arial, sans-serif;
-}
-
-#testimonials {
-  font-style: italic;
-}
-
-#testimonials p:nth-child(2) {
-  margin-top: 25px;
-}
-
-/* END FOOTER */
-
-/* Additional Styles for Dropdown Menu */
 .dropdown-menu {
   width: 200px;
 }
@@ -83,10 +24,57 @@ h2 {
   padding: 10px;
 }
 
-/* Additional Styles for Columns */
-.col-md-4 {
-  flex: 0 0 33.333333%;
-  max-width: 33.333333%;
+.column {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #000000; /* Changed border color to black */
+  border-radius: 5px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: none; /* Hide columns by default */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.column:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.column-heading {
+  background-color: #333;
+  color: white;
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+.column-content {
+  color: #666;
+  font-size: 14px;
+}
+
+footer {
+  background-color: #4CAF50;
+  padding: 20px;
+  color: white;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  color: #333;
 }
 
 /* Additional Styles for Testimonials */
@@ -94,9 +82,10 @@ h2 {
   color: #ffffff;
   font-size: 1.1em;
 }
+
 .service-box {
   border: 2px solid #000000;
-  padding: 20px,20px;
+  padding: 20px 20px; /* Corrected padding */
 }
 
 .bg-primary {
@@ -121,4 +110,33 @@ h2 {
 
 .bg-info {
   background-color: #17a2b8 !important;
+}
+
+/* Additional Styles for Columns */
+.row {
+  margin-left: -5px; /* Adjust margin to compensate for negative margin of columns */
+  margin-right: -5px; /* Adjust margin to compensate for negative margin of columns */
+}
+
+.column {
+  padding: 0; /* Remove padding to ensure columns align properly */
+}
+
+/* Adjustments for Bootstrap grid */
+[class^="col-"] {
+  padding-left: 5px; /* Add some padding to compensate for negative margin */
+  padding-right: 5px; /* Add some padding to compensate for negative margin */
+}
+
+/* Adjustments for Testimonials */
+#testimonials {
+  font-style: italic;
+  margin-top: 20px; /* Add margin to separate testimonials from main content */
+}
+
+/* Adjustments for Service Boxes */
+.service-box {
+  margin-bottom: 20px;
+  border: 2px solid #000000;
+  padding: 20px; /* Add margin between service boxes */
 }
